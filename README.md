@@ -178,6 +178,7 @@ def fit_nlorentz_linbg(x, y, x0_list, dx=5.0, g_init=5.0, gmin=0.5, gmax=50.0):
 与えられたsingle spectrumに対して、以下の式を用いてフィッテイングにより相分率Φを求める。
 ```math
 I(\omega)={\rm B.G.}+A\left[\phi I_1(\omega) + (1-\phi)I_2(\omega) \right]
+=b_0 + b_1 \omega + c_0 I_1(\omega) + c_1 I_2(\omega)
 ```
 このとき、バックグラウンドのダブルカウントを防ぐために、基準スペクトルとしてはバックグラウンドを除いたスペクトルを採用する。
 ここで、パラメータAはサンプル由来の信号強度とみなすことができ、画像化する際にデフォーカス領域の判別に用いる。
