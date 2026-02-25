@@ -33,7 +33,7 @@ y_smooth = savgol_filter(y, window_length, polyorder)
 ### Cosmic Ray の除去
 得られたスペクトルは宇宙線が混入しているため、何かしらの方法で除去しておく必要がある。
 一般に、標準偏差は外れ値に弱いので、ここでは外れ値に対してロバストな手法として、[中央絶対偏差(Median Absolute Deviation)](https://note.com/maru_mountain/n/n7407f861abaa)を紹介する。
-MADは、「データの中央値とのズレ」の中央値、​
+MADは、「データの中央値とのズレ」の中央値、すなわち​
 ```math
 {\rm MAD} = \mathrm{median}(|x_i - \mathrm{median}(x)|)​
 ```
